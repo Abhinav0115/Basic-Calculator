@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="BsC_style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script type="text/javascript" src="BsC_script.js"></script>
+</head>
+
+
+<body>
+    <h1 class="heading">Basic Calculator</h1>
+    <center>
+        <div class="calcFrame">
+            <form action="" name="Calculator">
+                <input class="textView" type="text" name="textView" id="" readonly>
+            </form>
+            <table>
+                <tr>
+                    <td><button class="btn" onclick="insert('(')"><span class=btnSize>&#10098;</span></button></td>
+                    <!-- ( -->
+                    <td><button class="btn" onclick="insert(')')"><span class=btnSize>&#10099;</span></button></td>
+                    <!-- ) -->
+                    <td><button class="btn del_1 btnSize" onclick="allClear() ">AC</button></td>
+                    <!-- AC -->
+                    <td><button class=" btn del_2" onclick="backspace()"><span class="material-symbols-outlined">
+                                backspace
+                            </span></button></td> <!-- Backspace (delete last) -->
+
+
+                </tr>
+                <tr>
+                    <td><button class="btn" onclick="square()">X<span class=btnSize>&#178;</span></button></td>
+                    <!-- square -->
+                    <td><button class="btn" onclick="insert('%')"><span class=btnSize>&#37;</span></button></td>
+                    <!-- modulo -->
+                    <td><button class="btn" onclick="insert('/')"><span class=btnSize>&#247;</span></button></td>
+                    <!-- divide -->
+                    <td><button class="btn" onclick="insert('*')"><span class=btnSize>&#215;</span></button></td>
+                    <!-- multiply -->
+                </tr>
+                <tr>
+                    <td><button class="btn" onclick="insert(7)"><span class=btnSize>&#55;</span></button></td>
+                    <!-- 7 -->
+                    <td><button class="btn" onclick="insert(8)"><span class=btnSize>&#56;</span></button></td>
+                    <!-- 8 -->
+                    <td><button class="btn" onclick="insert(9)"><span class=btnSize>&#57;</span></button></td>
+                    <!-- 9 -->
+                    <td><button class="btn" onclick="insert('-')"><span class=btnSize>&#8722;</span></button></td>
+                    <!-- substract -->
+                </tr>
+                <tr>
+                    <td><button class="btn" onclick="insert(4)"><span class=btnSize>&#52;</span></button></td>
+                    <!-- 4 -->
+                    <td><button class="btn" onclick="insert(5)"><span class=btnSize>&#53;</span></button></td>
+                    <!-- 5 -->
+                    <td><button class="btn" onclick="insert(6)"><span class=btnSize>&#54;</span></button></td>
+                    <!-- 6 -->
+                    <td><button class="btn" onclick="insert('+')"><span class=btnSize>&#43;</span></button></td>
+                    <!-- plus -->
+                </tr>
+                <tr>
+                    <td><button class="btn" onclick="insert(1)"><span class=btnSize>&#49;</span></button></td>
+                    <!-- 1 -->
+                    <td><button class="btn" onclick="insert(2)"><span class=btnSize>&#50;</span></button></td>
+                    <!-- 2 -->
+                    <td><button class="btn" onclick="insert(3)"><span class=btnSize>&#51;</span></button></td>
+                    <!-- 3 -->
+                    <!-- <td><input type="button" value="+" class="btn" onclick=""></td> -->
+                    <td rowspan="5"><button class="btn enter" onclick="equal()"><span
+                                class=btnSize>&#61;</span></button>
+                    </td> <!-- Enter -->
+                </tr>
+                <tr>
+                    <td><button class="btn" onclick="squrt()"><span class=btnSize>&#8730;</span>X</button></td>
+                    <!-- square root -->
+                    <td><button class="btn" onclick="insert(0)"><span class=btnSize>&#48;</span></button></td>
+                    <!-- 0 -->
+                    <td><button class="btn" onclick="insert('.')"><span class=btnSize>&#8228;</span></button></td>
+                    <!-- 5 -->
+                </tr>
+            </table>
+    </center>
+    </div>
+
+
+</body>
+
+</html>
