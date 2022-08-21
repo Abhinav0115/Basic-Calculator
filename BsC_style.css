@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: darkseagreen;
+    background-color: rgb(48, 56, 48);
 }
 
 .material-symbols-outlined {
@@ -21,67 +21,73 @@ h1 {
     text-align: center;
     font-weight: bolder;
     text-transform: uppercase;
-    color: rgb(9, 22, 197);
+    color: rgb(9, 197, 166);
     font-size: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 25px;
-    background-color: darkseagreen;
+}
+
+h4 {
+    text-align: center;
+    font-weight: bolder;
+    /* text-transform: uppercase; */
+    color: rgb(35, 114, 77);
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* padding: 25px; */
 }
 
 .calcFrame {
-    margin-top: 1.5em;
-
-    width: 320px;
-    height: 400px;
+    margin-top: 1em;
+    width: 325px;
+    height: 420px;
     border: 5px;
     border-style: solid;
     border-radius: 5%;
-    background-color: blanchedalmond;
+    background-color: rgb(218, 217, 217);
+    border-color: rgb(5, 114, 139);
+    border-width: 8px;
 
 }
 
-.textView {
+.display {
     border-radius: 2%;
-    margin-top: 10px;
-    margin-bottom: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     height: 50px;
     width: 286px;
-    background-color: lightgreen;
+    background-color: rgb(169, 203, 169);
     font-size: 18px;
     padding-left: 5px;
     padding-right: 4px;
+    text-align: right;
 }
 
 
 .btn {
-    border-radius: 45%;
+    border-radius: 10%;
     height: 50px;
     width: 70px;
-    background-color: rgb(183, 112, 112);
+    background-color: rgb(113, 158, 166);
     font-size: 20px;
 }
 
 .numpad
 {
-    background-color: rgb(66, 176, 190);
+    background-color: rgb(72, 138, 148);
 }
 
 button:hover {
     background-color: rgb(46, 114, 151);
 }
 
-.del_1 {
-    background-color: rgb(217, 0, 0);
-}
-
-.del_2 {
-    background-color: rgb(161, 27, 27);
+.del {
+    background-color: rgb(172, 49, 4);
 }
 
 .enter {
     height: 101px;
-    background-color: green;
-    border-radius: 15%;
+    background-color: rgb(29, 125, 29);
 }
 
 .btnSize {

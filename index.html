@@ -16,20 +16,26 @@
 
 <body>
     <h1 class="heading">Basic Calculator</h1>
+    <h4 class="heading4">This is an online simple basic calculator build using javascript.<br>You can click the buttons
+        or type to perform calculations as you would on a physical calculator.</h4>
+
     <center>
         <div class="calcFrame">
             <form action="" name="Calculator">
-                <input class="textView" type="text" name="textView" id="" readonly>
+                <input class="display" type="text" name="display" id="display" onkeypress="return event.charCode >= 40
+                && event.charCode <= 57 || event.charCode == 8">
             </form>
             <table>
                 <tr>
-                    <td><button class="btn" onclick="insert('(')"><span class="btnSize">&#10098;</span></button></td>
+                    <td><button class="btn" onclick="Calculator.display.value+='('"><span
+                                class="btnSize">&#10098;</span></button></td>
                     <!-- ( -->
-                    <td><button class="btn" onclick="insert(')')"><span class="btnSize">&#10099;</span></button></td>
+                    <td><button class="btn" onclick="Calculator.display.value+=')'"><span
+                                class="btnSize">&#10099;</span></button></td>
                     <!-- ) -->
-                    <td><button class="btn del_1 btnSize" onclick="allClear() ">AC</button></td>
+                    <td><button class="btn del btnSize" onclick="Calculator.display.value=''">AC</button></td>
                     <!-- AC -->
-                    <td><button class=" btn del_2" onclick="backspace()"><span class="material-symbols-outlined">
+                    <td><button class=" btn del" onclick="backspace()"><span class="material-symbols-outlined">
                                 backspace
                             </span></button></td> <!-- Backspace (delete last) -->
 
@@ -38,39 +44,52 @@
                 <tr>
                     <td><button class="btn" onclick="square()">X<span class="btnSize">&#178;</span></button></td>
                     <!-- square -->
-                    <td><button class="btn" onclick="insert('%')"><span class="btnSize">&#37;</span></button></td>
-                    <!-- modulo -->
-                    <td><button class="btn" onclick="insert('/')"><span class="btnSize">&#247;</span></button></td>
+                    <td><button class="btn" onclick="squrt()"><span class=" btnSize">&#8730;</span>X</button></td>
+                    <!-- square root -->
+                    <td><button class="btn" onclick="Calculator.display.value+='/'"><span
+                                class="btnSize">&#247;</span></button></td>
                     <!-- divide -->
-                    <td><button class="btn" onclick="insert('*')"><span class="btnSize">&#215;</span></button></td>
+                    <td><button class="btn" onclick="Calculator.display.value+='*'"><span
+                                class="btnSize">&#215;</span></button></td>
                     <!-- multiply -->
                 </tr>
                 <tr>
-                    <td><button class="btn numpad" onclick="insert(7)"><span class="btnSize">&#55;</span></button></td>
+                    <td><button class="btn numpad" onclick="Calculator.display.value+='7'"><span
+                                class="btnSize">&#55;</span></button></td>
                     <!-- 7 -->
-                    <td><button class="btn numpad" onclick="insert(8)"><span class="btnSize">&#56;</span></button></td>
+                    <td><button class="btn numpad" onclick="Calculator.display.value+='8'"><span
+                                class="btnSize">&#56;</span></button></td>
                     <!-- 8 -->
-                    <td><button class="btn numpad" onclick="insert(9)"><span class="btnSize">&#57;</span></button></td>
+                    <td><button class="btn numpad" onclick="Calculator.display.value+='9'"><span
+                                class="btnSize">&#57;</span></button></td>
                     <!-- 9 -->
-                    <td><button class="btn" onclick="insert('-')"><span class="btnSize">&#8722;</span></button></td>
+                    <td><button class="btn" onclick="Calculator.display.value+='-'"><span
+                                class="btnSize">&#8722;</span></button></td>
                     <!-- substract -->
                 </tr>
                 <tr>
-                    <td><button class="btn numpad" onclick="insert(4)"><span class="btnSize">&#52;</span></button></td>
+                    <td><button class="btn numpad" onclick="Calculator.display.value+='4'"><span
+                                class="btnSize">&#52;</span></button></td>
                     <!-- 4 -->
-                    <td><button class="btn numpad" onclick="insert(5)"><span class="btnSize">&#53;</span></button></td>
+                    <td><button class="btn numpad" onclick="Calculator.display.value+='5'"><span
+                                class="btnSize">&#53;</span></button></td>
                     <!-- 5 -->
-                    <td><button class="btn numpad" onclick="insert(6)"><span class="btnSize">&#54;</span></button></td>
+                    <td><button class="btn numpad" onclick="Calculator.display.value+='6'"><span
+                                class="btnSize">&#54;</span></button></td>
                     <!-- 6 -->
-                    <td><button class="btn" onclick="insert('+')"><span class="btnSize">&#43;</span></button></td>
+                    <td><button class="btn" onclick="Calculator.display.value+='+'"><span
+                                class="btnSize">&#43;</span></button></td>
                     <!-- plus -->
                 </tr>
                 <tr>
-                    <td><button class="btn numpad" onclick="insert(1)"><span class="btnSize">&#49;</span></button></td>
+                    <td><button class="btn numpad" onclick="Calculator.display.value+='1'"><span
+                                class="btnSize">&#49;</span></button></td>
                     <!-- 1 -->
-                    <td><button class="btn numpad" onclick="insert(2)"><span class="btnSize">&#50;</span></button></td>
+                    <td><button class="btn numpad" onclick="Calculator.display.value+='2'"><span
+                                class="btnSize">&#50;</span></button></td>
                     <!-- 2 -->
-                    <td><button class="btn numpad" onclick="insert(3)"><span class="btnSize">&#51;</span></button></td>
+                    <td><button class="btn numpad" onclick="Calculator.display.value+='3'"><span
+                                class="btnSize">&#51;</span></button></td>
                     <!-- 3 -->
                     <!-- <td><input type="button" value="+" class="btn" onclick=""></td> -->
                     <td rowspan="5"><button class="btn enter btnSize" onclick="equal()"><span
@@ -78,12 +97,15 @@
                     </td> <!-- Enter -->
                 </tr>
                 <tr>
-                    <td><button class="btn" onclick="squrt()"><span class=" btnSize">&#8730;</span>X</button></td>
-                    <!-- square root -->
-                    <td><button class="btn numpad" onclick="insert(0)"><span class=" btnSize">&#48;</span></button>
+                    <td><button class="btn" onclick="Calculator.display.value+='%'"><span
+                                class="btnSize">&#37;</span></button></td>
+                    <!-- modulo -->
+                    <td><button class="btn numpad" onclick="Calculator.display.value+='0'"><span
+                                class=" btnSize">&#48;</span></button>
                     </td>
                     <!-- 0 -->
-                    <td><button class="btn" onclick="insert('.')"><span class=" btnSize dot">&#8228;</span></button>
+                    <td><button class="btn" onclick="Calculator.display.value+='.'"><span
+                                class=" btnSize dot">&#8228;</span></button>
                     </td>
                     <!-- dot -->
                 </tr>
